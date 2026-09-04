@@ -7,7 +7,7 @@ LazyCat LPK v2 packaging for [Infisical](https://github.com/Infisical/infisical)
 - Runs `infisical/infisical:v0.165.3` through the `docker.1ms.run` mirror.
 - Uses PostgreSQL 14 and Redis 7 with persistent application storage.
 - The site URL is derived from the LazyCat application domain.
-- Encryption, authentication, cookie-signing, and database secrets use separate stable installation secrets; the public sample values from upstream are not used.
+- Encryption, authentication, cookie-signing, and database secrets use separate stable installation secrets; the encryption key is normalized to the required 16-byte hexadecimal format, and the public sample values from upstream are not used.
 - The complete UI remains behind LazyCat authentication.
 - LazyCat OIDC, automatic login injection, and file-picker interception are intentionally omitted as requested.
 

@@ -17,7 +17,7 @@ services:
       - NODE_ENV=production
       - HOST=0.0.0.0
       - PORT=8080
-      - ENCRYPTION_KEY={{ stable_secret "encryption_key" | substr 0 32 }}
+      - ENCRYPTION_KEY={{ stable_secret "encryption_key" | sha256sum | substr 0 32 }}
       - AUTH_SECRET={{ stable_secret "auth_secret" | substr 0 32 | b64enc }}
       - COOKIE_SECRET_SIGN_KEY={{ stable_secret "cookie_secret_sign_key" }}
       - DB_CONNECTION_URI=postgres://infisical:{{ stable_secret "postgres_password" }}@db:5432/infisical
