@@ -1,0 +1,18 @@
+package: community.lazycat.app.infisical
+version: 0.165.3
+name: Infisical
+description: Infisical is the open-source platform for secrets, certificates, and privileged access management.
+min_os_version: 1.5.0
+homepage: https://github.com/Infisical/infisical
+author: Infisical
+license: MIT
+permissions:
+  required:
+    - net.internet
+locales:
+  zh:
+    name: Infisical
+    description: 面向密钥、证书和特权访问管理的开源平台
+  en:
+    name: Infisical
+    description: Open-source platform for secrets, certificates, and privileged access management
