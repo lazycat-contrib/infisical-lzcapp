@@ -5,11 +5,10 @@ application:
     - location: /
       backend: http://backend:8080/
       fix_websocket_header: true
-
 services:
   backend:
-    # upstream: docker.io/infisical/infisical:v0.165.3
-    image: docker.1ms.run/infisical/infisical:v0.165.3
+    # upstream: docker.io/infisical/infisical:v0.165.6
+    image: docker.1ms.run/infisical/infisical:v0.165.6
     depends_on:
       - db
       - redis
@@ -27,13 +26,11 @@ services:
       - OTEL_TELEMETRY_COLLECTION_ENABLED=false
       - DISABLE_UPDATE_CHECK=true
       - ANNOUNCEMENTS_ENABLED=false
-
   redis:
     # upstream: docker.io/library/redis:7.4.11-alpine
     image: docker.1ms.run/library/redis:7.4.11-alpine
     binds:
       - /lzcapp/var/infisical/redis:/data
-
   db:
     # upstream: docker.io/library/postgres:14-alpine
     image: docker.1ms.run/library/postgres:14-alpine
@@ -50,6 +47,5 @@ services:
       interval: 5s
       timeout: 10s
       retries: 10
-
 usage: |
   Open Infisical and use its native registration and login flow. Database, Redis, encryption, authentication, and cookie-signing secrets are generated deterministically for this installation and persist across restarts. LazyCat OIDC, login autofill, and file-picker injection are intentionally not configured.

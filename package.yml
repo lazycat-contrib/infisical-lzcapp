@@ -1,5 +1,5 @@
 package: community.lazycat.app.infisical
-version: 0.165.3
+version: 0.165.6
 name: Infisical
 description: Infisical is the open-source platform for secrets, certificates, and privileged access management.
 min_os_version: 1.5.0
