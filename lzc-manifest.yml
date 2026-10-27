@@ -7,8 +7,8 @@ application:
       fix_websocket_header: true
 services:
   backend:
-    # upstream: docker.io/infisical/infisical:v0.167.2
-    image: docker.1ms.run/infisical/infisical:v0.167.2
+    # upstream: docker.io/infisical/infisical:v0.167.4
+    image: docker.1ms.run/infisical/infisical:v0.167.4
     depends_on:
       - db
       - redis
